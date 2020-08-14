@@ -5,13 +5,17 @@ import Baitap1 from './Baitap1/index';
 import Baitap2 from './Baitap2'; // khỏi cần vào index
 // import Baitap1 from './Baitap1';
 import Baitap3 from './Baitap3';
+import Databinding from './Databinding/demo';
+import Home from './Shopping/Home';
 
 function App() {
   return (
     <div>
       {/* <Baitap1 /> */}
       {/* <Baitap2 /> */}
-      <Baitap3 />
+      {/* <Baitap3 /> */}
+      {/* <Databinding /> */}
+      <Home />
     </div>
   );
 }
