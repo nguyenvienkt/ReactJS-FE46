@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import './header.css';
 import Logo from '../assets/img/logo.png'; // phải có alt khác img, picture, photo
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
 export default class Header extends Component {
 	render() {
 		return (
 			<nav className="navbar navbar-expand-sm navbar-dark bg-dark">
 				<a className="navbar-brand" href="#">
-					<img src={Logo} alt="logo" className="logo"/> 
+					<img src={Logo} alt="logo" className="logo" />
 				</a>
 				<button
 					className="navbar-toggler d-lg-none"
@@ -64,6 +65,9 @@ export default class Header extends Component {
 							Search
 						</button>
 					</form>
+					<div>
+						<ShoppingCartOutlinedIcon color="primary" />
+					</div>
 				</div>
 			</nav>
 		)

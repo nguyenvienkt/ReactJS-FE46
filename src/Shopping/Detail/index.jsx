@@ -6,7 +6,7 @@ export default class Detail extends Component {
   // Do đó mình phải đặt state cho isShowDetail để khi đổi state thì react render lại giao diện
   
   state = {
-    isShowDetail:false,
+    isShowDetail:true,
     a:1,
   };
 
@@ -66,6 +66,8 @@ export default class Detail extends Component {
   
   
   render() {
+		// if(!this.props.product) return null;
+		const {img,name,screen,backCamera,frontCamera,price} = this.props.product;
 		return (
 			<div className="container mt-5">
 				<button className="btn btn-warning" onClick={this.handleToggleDetail}>Hide Detail</button>
@@ -113,8 +115,8 @@ export default class Detail extends Component {
 				{this.state.isShowDetail && (
 					<div className="row">
 						<div className="col-4">
-							<h3>Iphone 11 promax</h3>
-							<img src="" alt="" />
+							<h3>{name}</h3>
+							<img src={img} alt="smart phone" className="w-100" />
 						</div>
 						<div className="col-8">
 							<h4>Thông số kỹ thuật</h4>
@@ -122,23 +124,19 @@ export default class Detail extends Component {
 								<tbody>
 									<tr>
 										<td>Màn hình</td>
-										<td>Full HD</td>
+										<td>{screen}</td>
 									</tr>
 									<tr>
-										<td>Hệ điều hành</td>
-										<td>iOS</td>
+										<td>Camera Sau</td>
+										<td>{backCamera}</td>
 									</tr>
 									<tr>
-										<td>Camera trước</td>
-										<td>20 MP</td>
+										<td>Camera Trước</td>
+										<td>{frontCamera}</td>
 									</tr>
 									<tr>
-										<td>Camera sau</td>
-										<td>48 MP</td>
-									</tr>
-									<tr>
-										<td>RAM</td>
-										<td>4GB</td>
+										<td>Price</td>
+										<td>{price}</td>
 									</tr>
 								</tbody>
 							</table>
